@@ -13,14 +13,17 @@ REM Credits: http://www.makeuseof.com/tag/write-simple-batch-bat-file/
 ::http://superuser.com/questions/32771/list-all-files-in-all-subfolders
 ::http://stackoverflow.com/questions/5664761/how-to-count-no-of-lines-in-text-file-and-store-the-value-into-a-variable-using
 ::http://stackoverflow.com/questions/3097044/batch-echo-or-variable-not-working
+::http://stackoverflow.com/questions/10813943/check-if-any-type-of-files-exist-in-a-directory-using-batch-script
+::http://stackoverflow.com/questions/132799/how-can-you-echo-a-newline-in-batch-files
+::http://www.dostips.com/DtTutoFunctions.php
 
 REM Author - Alan Polson
 
+DIR /b /s *.mxd.doc >filelist.txt
 CLS
-if not exist *.mxd.doc GOTO START
-DIR /b /s *.mxd.doc >>filelist.txt
+REM if not exist filelist.txt CALL START
 CHOICE /D N /T 10 /M "Feeling Lucky?"
-IF ERRORLEVEL==2 GOTO START
+IF ERRORLEVEL==2 GOTO START GOTO safety_prompt
 IF ERRORLEVEL==1 GOTO renaming_bit
 
 :START
@@ -35,18 +38,19 @@ ECHO Your map files should have the .doc extension removed.
 ECHO.
 ECHO Hint: If you know exactly what this program will do, 
 ECHO enter 'Y' at the "Feeling Lucky?" prompt
+REM ECHO.
+REM ECHO.Note: If a file with a '.mxd.doc' extension is not found in this
+REM ECHO. or a child folder, this program will terminate now
+PAUSE
+REM GOTO eof
 
-CHOICE /M "Is this file is in a folder that has a '.mxd.doc'?"
-IF ERRORLEVEL==2 exit
-IF ERRORLEVEL==1
-CLS
-
+:safety_prompt
 ::getting the number of files that have .mxd.doc
 setlocal EnableDelayedExpansion
 set "cmd=findstr /R /N "^^" filelist.txt | find /C ":""
 for /f %%a in ('!cmd!') do set number=%%a
 
-:safety_prompt
+CLS
 ECHO This program will now convert %number% file(s) 
 ECHO.
 ECHO If this seems right, enter Y in the next 10 seconds
