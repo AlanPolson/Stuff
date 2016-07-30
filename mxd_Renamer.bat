@@ -34,7 +34,7 @@ ECHO.
 ECHO Instructions for use:
 ECHO 1) Place .bat file in folder with map files that have '.doc' extensions. 
 ECHO 2) Double Click .bat file to run it.
-ECHO Your map files should have the .doc extension removed.
+ECHO After it runs, your map files should have the .doc extension removed.
 ECHO.
 ECHO Hint: If you know exactly what this program will do, 
 ECHO enter 'Y' at the "Feeling Lucky?" prompt
