@@ -4,5 +4,9 @@ As of now, it contains contains the [mxd_Renamer](mxd_Renamer.bat), which is a W
 
 ## Download instructions:
 Click on the file's raw content. You'll know it is raw if the url says 'raw.githubusercontent.com'
+
 Right click the file and 'Save As'
-The filename with the appropriate extension should already be entered in. To ensure another extension isn't added, put the file name in quotes and select file-type -> 'all files' 
+
+The filename with the appropriate extension should already be entered in. 
+
+To ensure another extension isn't added, put the file name in quotes and select file-type -> 'all files' 
