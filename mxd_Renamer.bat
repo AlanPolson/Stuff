@@ -17,7 +17,7 @@ REM Credits: http://www.makeuseof.com/tag/write-simple-batch-bat-file/
 ::http://stackoverflow.com/questions/132799/how-can-you-echo-a-newline-in-batch-files
 ::http://www.dostips.com/DtTutoFunctions.php
 
-REM Author - Alan Polson
+REM Author - Alan Polson https://github.com/AlanPolson/Stuff
 
 DIR /b /s *.mxd.doc >filelist.txt
 CLS
@@ -30,6 +30,7 @@ IF ERRORLEVEL==1 GOTO renaming_bit
 ECHO This file was created to convert ArcGIS map file (.mxd files)
 ECHO which have a .doc extension added to them.
 ECHO It will do this for all files within this folder (including nested files)
+ECHO.Source: https://github.com/AlanPolson/Stuff
 ECHO.
 ECHO Instructions for use:
 ECHO 1) Place .bat file in folder with map files that have '.doc' extensions. 
