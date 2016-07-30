@@ -10,3 +10,18 @@ Right click the file and 'Save As'
 The filename with the appropriate extension should already be entered in. 
 
 To ensure another extension isn't added, put the file name in quotes and select file-type -> 'all files' 
+
+```html
+<h2>Example of code</h2>
+
+<pre>
+    <div class="container">
+        <div class="block two first">
+            <h2>Your title</h2>
+            <div class="wrap">
+            //Your content
+            </div>
+        </div>
+    </div>
+</pre>
+```
