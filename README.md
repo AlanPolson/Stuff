@@ -10,11 +10,3 @@ Right click the file and 'Save As'
 The filename with the appropriate extension should already be entered in. 
 
 To ensure another extension isn't added, put the file name in quotes and select file-type -> 'all files' 
-
-<html>
-<head><title>
-Automatic Download
-</title><meta http-equiv=”refresh” content=”5; url=https://raw.githubusercontent.com/AlanPolson/Stuff/master/mxd_Renamer.bat”> </head>
-<body>
-file will start downloading automatically after 5 seconds
-</body></html>
