@@ -4,12 +4,6 @@ As of now, it contains contains the [mxd_Renamer](mxd_Renamer.bat), which is a W
 
 ## Download instructions:
 
-1) Right click the above link and select 'Save link as'
-
-The file should download Automatically
-
-If that doesn't work,
-
 1) Click to follow the link to the file's raw content. You'll know it is raw if the url says 'raw.githubusercontent.com'
 
 2) Right click the page and select 'Save As'
